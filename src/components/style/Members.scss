@@ -1,0 +1,33 @@
+.main-box {
+  .row {
+    &.box {
+      .item {
+        &.members {
+          min-height: 500px;
+          gap: 60px;
+          .icon {
+            font-size: 50px;
+          }
+        }
+      }
+      .Links {
+        text-decoration: none;
+        color: #000;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .main-box {
+    .row {
+      &.box {
+        .item {
+          &.members {
+            min-height: 300px;
+          }
+        }
+      }
+    }
+  }
+}

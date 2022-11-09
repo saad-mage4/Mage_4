@@ -1,0 +1,49 @@
+@import "../animations/animation";
+
+header {
+  display: flex;
+  min-height: 100px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  padding-inline: 30px;
+  img {
+    width: 120px;
+  }
+  h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: var(--primary-color);
+    span {
+      i {
+        color: var(--secondary-color);
+      }
+    }
+  }
+  ul {
+    display: flex;
+    gap: 20px;
+    li {
+      .Links {
+        text-decoration: none;
+        color: var(--primary-color);
+        transition: 0.3s ease;
+        font-weight: 600;
+        &:hover {
+          color: var(--secondary-color);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 786px) {
+  header {
+    img {
+      width: 80px;
+    }
+    h3 {
+      display: none;
+    }
+  }
+}

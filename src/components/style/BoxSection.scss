@@ -1,0 +1,58 @@
+.main-box {
+  min-height: 500px;
+  width: 100%;
+  position: relative;
+  margin-block: 30px;
+  overflow: hidden;
+  .row {
+    min-height: 280px;
+    width: 100%;
+    &.box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      .item {
+        background-color: var(--primary-color);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px;
+        min-height: 280px;
+        text-align: center;
+        transition: all 0.3s;
+        color: #fff;
+        cursor: pointer;
+        &.delay-2ms {
+          animation-delay: 0.2s;
+        }
+        &.delay-3ms {
+          animation-delay: 0.3s;
+        }
+        &.delay-4ms {
+          animation-delay: 0.4s;
+        }
+        &.delay-5ms {
+          animation-delay: 0.5s;
+        }
+        .logo {
+          font-size: 30px;
+        }
+        :is(.logo, h3) {
+          pointer-events: none;
+        }
+        &:hover {
+          background-color: #f7f7f7;
+          color: var(--secondary-color);
+          box-shadow: rgba(7, 42, 94, 0.3) 0 0 5px 8px inset;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .main-box {
+    padding-inline: 20px;
+  }
+}
